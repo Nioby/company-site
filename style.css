@@ -1,0 +1,281 @@
+/*  задний фон на всю страницу    */
+html {
+	background: url(img/1.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.description{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* Придание стиля модулю заказа обратного звонка */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+
+/*  размещение кнопки "Заказать обратный звонок" */
+.button {
+    margin-top: 4%;
+    margin-left: 4%;
+}
+
+/*  кнопка  "Заказать обратный звонок"   */
+.main-button {
+    border-radius: 30px;
+    width: 60px;
+    height: 60px;
+    cursor:pointer;
+    display: block;
+    overflow:hidden;
+    border: 1px solid #A9A9A9;
+    font-size: 20px;
+	color: #fff;
+	background-color: #2ac102;
+	font-family: modern;
+    text-decoration: none;
+    transition: All 0.45s ease; 
+    box-shadow:
+    inset rgba(0,0,0,.5) -5px -5px 8px,
+    inset rgba(255,255,255,.9) 4px 4px 8px,
+    rgba(0,0,0,.8) 3px 3px 8px -3px;
+}
+
+/* свойство для расширения кнопки при наведении курсора */
+.main-button:hover {
+    width: 300px;
+}
+
+/* всплывающее окно */
+.popup {
+    display: none;
+	position: absolute;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+}
+
+/* затемненный фон вокруг формы */	
+.popup_background {
+	background:rgba(0,0,0,0.7);
+	position:fixed;
+	z-index:2;
+	height:100%;
+	width:100%;
+}
+
+/* модальное окно - внешний вид формы */
+.modal-window {
+	position: relative;
+	margin:8% auto;
+	z-index:2;
+	height:auto;
+	width:345px;
+	padding: 40px 40px;
+	background: #F0DC82;
+	border-radius:30px;
+}
+
+/* модальное окно - внутренний вид формы */
+.modal-window input {
+	height: auto;
+	padding:4px 2%;
+   	border-radius:5px;
+	border: 1px solid #000000;
+  	background: #ffffff !important;
+   	outline: none;
+ 	color: black;
+ 	font-size: 20px;
+ 	font-family: Times New Roman;
+}
+
+/*  крестик для закрытия формы */
+.close{
+	margin-top: -55px;
+	margin-right: -55px;
+	text-align: right;
+	cursor:pointer;
+}
+
+/* заголовок формы */
+.form-title {
+	font-size: 21px;
+	text-align:  center;
+	font-family: Times New Roman;
+	margin-bottom: 12px;
+}
+
+/* расположение таблицы  */
+.table {
+	text-align: left;
+    margin-left: 25px;
+}
+
+/*  внутренний вид таблицы */
+.table input {
+    width: 70%;
+    padding: 5px 7px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+ }
+
+/* размер шрифта текста "Телефон", "Время", "Дата" */
+.txttd {
+    text-align:right;
+	font-size: 20px; 	 
+}
+
+/* внутренний вид элементов для ввода */
+.telbox input{
+    padding: 8px 7px;
+}
+
+/* фокусировка элемента telbox после нажатия */
+.telbox input:focus{
+    border: 2px solid orange;
+    color: blue;
+}
+
+/* фокусировка элемента timebox после нажатия */
+.timebox input:focus {
+    border: 2px solid orange;
+    color: blue;
+}
+
+/* фокусировка элемента datebox после нажатия */
+.datebox input:focus {
+    border: 2px solid orange;
+    color: blue;
+}
+
+/* фокусировка элемента telbox при наведении курсора */
+.telbox input:hover{
+   border: 2px solid blue;
+}
+
+/* фокусировка элемента timebox при наведении курсора */
+.timebox input:hover{
+   border: 2px solid blue;
+   color: blue;
+}
+
+/* фокусировка элемента datebox при наведении курсора */
+.datebox input:hover{
+   border: 2px solid blue;
+   color: blue;
+}
+
+/* кнопка "Перезвоните мне" */
+.button-call-me {
+    text-align: center;
+}
+
+/* внутренний вид кнопки "Перезвоните мне"  */
+.button-call-me input {
+    margin-top: 2px;
+    margin-bottom: -10px;
+    padding: 9px 34px;
+	cursor:pointer;
+	font-size: 19px;
+	font-family: Times New Roman;
+    background-color: #F0DC82 !important;
+    box-shadow:
+    inset rgba(0,0,0,.5) -5px -5px 8px,
+    inset rgba(255,255,255,.9) 4px 4px 8px,
+    rgba(0,0,0,.8) 3px 3px 8px -3px;
+}
+
+/* эффект кнопки при наведении курсора */
+.button-call-me input[type="submit"]:hover {
+    color: blue;
+}
+
+/* ошибки при неправильном вводе */
+.errors {
+    font-size: 14px;
+    color:red;
+}
+
+/* всплывающее окно */
+.popup_2 {
+    display: none;
+	position: absolute;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+}
+
+/* затемненный фон вокруг формы */
+.popup_bg_2 {
+	background:rgba(0,0,0,0.7);
+	position:fixed;
+	z-index:2;
+	height:100%;
+	width:100%;
+}
+
+/* модальное окно - внешний вид формы */
+.modal-window_2 {
+	position: relative;
+	margin:10% auto;
+	z-index:2;
+	height:auto;
+	width:400px;
+	padding: 45px 30px;
+	background: #F0DC82;
+	border-radius:30px;
+}
+
+/*  крестик для закрытия формы */
+.close_2{
+	margin-top: -60px;
+	margin-right: -45px;
+	text-align: right;
+	cursor:pointer;
+}
+
+/* заголовок формы */
+.form-title_2 {
+	font-size: 20px;
+	text-align:  center;
+	font-family: Times New Roman;
+}
+
+/* подзаголовок формы */
+.form-subtitle_2 {
+    font-size: 20px;
+	text-align:  center;
+	font-family: Times New Roman;
+	margin-bottom: -15px;
+	margin-top: 10px;
+}
+
+/* кнопка возвращения на главную страницу */
+.button-return {
+    text-align:  center;
+    margin-top: 25px;
+    margin-bottom: -15px;
+}
+
+/* внутренний вид кнопки */
+.button-return input{
+    padding: 10px 30px;
+	cursor:pointer;
+	font-size: 19px;
+	font-family: Times New Roman;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #F0DC82 !important;
+    box-shadow:
+    inset rgba(0,0,0,.5) -5px -5px 8px,
+    inset rgba(255,255,255,.9) 4px 4px 8px,
+    rgba(0,0,0,.8) 3px 3px 8px -3px;
+}
+
+/* эффект кнопки при наведении курсора */
+.button-return input[type="button"]:hover {
+    color: blue;
+}
+/* //////////////////////////////////////////////////////////////////////////////////// */

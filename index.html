@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="yandex-verification" content="19d34a4e55b37799" />
+		<title>Сайт компании</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link rel="shortcut icon" href="img/tel.ico" type="image/x-icon">
+        <p class="description">Демонстрационный сайт с кнопкой заказа обратного звонка</p>
+        <!-- функция для открытия всплывающего окна -->
+        <script>
+            function showPopup() {
+                    $(".popup").fadeIn(500);
+                };
+        </script>
+        <!-- библиотека для маски-->
+        <script src="js/jquery.js"></script>
+        <!-- плагин для маски-->
+        <script src="js/jquery.maskedinput-1.2.2.js"></script>
+        <!-- js для открытия/закрытия формы и отоборажения текущего времени и даты-->
+        <script src="js/load_timedate.js"></script>
+        <!-- js функция для определения маски номера телефона -->
+        <script>
+            jQuery(function($) {
+                $.mask.definitions['~']='[+-]';
+                $('#tel_field').mask('85555555555');
+            });
+        </script>
+        <!-- js для проверки полей ввода формы-->
+		<script src="js/form_validation.js"></script>
+        <!-- библиотека jquery для отправки данных форм без перезагрузки страницы-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+	</head>
+
+	<body onload="LoadTimeDate()">
+
+    	<div class="button">
+            <a href="#call_me" class="main-button" onclick="showPopup()">
+                <img src="img/phone-button.png" style="vertical-align:middle; ">
+                Заказать обратный звонок
+            </a>
+		</div>
+
+		<div class="popup" id="popup_id">
+		<div class="popup_background" ></div>
+
+			<div class="modal-window">
+
+                <div class="close">
+                    <a href="http://company-site.ru">
+    					<img src="img/close.png" title="Закрыть окно">
+                    </a>
+                </div>
+
+				<div class="form-title">Контактная форма</div>
+
+				<div>
+
+                        <form name="main_form"  id="id_form" onsubmit="return ValidateForm()" method="post"
+                        onkeypress="if(event.keyCode == 13) return false;" >
+
+							<div>
+								<table class="table" >
+									<tbody>
+											<tr>
+												<td class="txttd">
+													Телефон:
+												</td>
+
+												<td class="telbox">
+													<input type="tel" name="tel_number" placeholder="89876543210" class="telephone"
+													title="Введите свой номер телефона."  id="tel_field" autocomplete="off">
+                                                    <br><span class="errors" id="err_tel"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="txttd">
+													Время:
+												</td>
+
+												<td class="timebox">
+													<input type="time" name="time_to_call" title="Введите или выберите время звонка. Мы работаем с 10:00 до 22:00."
+                                                    id="time_field" >
+                                                    <br><span class="errors" id="err_time"></span>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="txttd">
+													Дата:
+												</td>
+
+												<td class="datebox">
+													<input type="date" name="date_to_call" title="Введите или выберите дату звонка. Мы работаем ежедневно."
+                                                    id="date_field" max="2017-12-31" >
+                                                    <br><span class="errors" id="err_date"></span>
+												</td>
+											</tr>
+
+									</tbody>
+								</table>
+							</div>
+
+                            <div class="button-call-me" >
+                                <input type="submit" title="Отправить заявку" value="Перезвоните мне">
+                            </div>
+
+						</form>
+				</div>
+
+			</div>
+		</div>
+
+        <div class="popup_2" id="popup_2_id">
+		<div class="popup_bg_2" ></div>
+
+            <div class="modal-window_2">
+
+                <div class="close_2">
+                    <a href="http://company-site.ru">
+            	        <img src="img/close.png" title="Закрыть окно" >
+                    </a>
+                </div>
+
+                <div class="form-title_2">Ваша заявка успешно отправлена.</div>
+                <div class="form-subtitle_2">Ждите звонка.</div>
+
+                <div class="button-return">
+                    <a href="http://company-site.ru">
+                        <input type="button" value="Вернуться на главную страницу">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+	</body>
+</html>
